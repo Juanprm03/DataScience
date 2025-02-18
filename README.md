@@ -1,7 +1,5 @@
 # DataScience
 
-## Bienvenidos al proyecto **AroundLife**
+## AppWeb AroundLife
 
-Este proyecto trata sobre la generación de una **Rueda de la vida** partiendo de una encuesta realizada a diferentes usarios de los cuales se capturan sus respuestas, estos datos se analizan pasando por un proceso de automatización para la generación de varios graficos en donde no solo vemos el estado individual sino que tambien un estado global represenatdo por el promedio general de todas las respuestas de los usuario.
-
-### Para conocer mas sobre este proyecto puedes navegar por las diferentes ramas que lo componen, en cada una encontraras las diferentes fases del mismo.
+Compuestas por un Frontend creado con React el cúal contiene un formulario que envia los datos recolectados mediante la comunicacion con la API que es de nuestra propiedad y fue desarrollada en Python con el uso del Framework de FLASK. Esta API contiene dos Rutas funcionales por el momento, una para el envio (POST) de los datos del formulario y la traida de datos (GET) que es utilizada por la app de analisis que se encuentra en la rama "python".
