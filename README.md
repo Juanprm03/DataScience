@@ -8,3 +8,11 @@ PYTHON es el lenguaje de programación elegido para automatizar todo este proces
 ## Aviso
 
 Para el uso correcto de este programa, se necesitan las credenciales de al cuenta de Google Cloud, las cúales por motivos de seguridad no son compartidas en este repositorio, para obtenerlas debe contactarse con los dueños del proyecto o crear tu propio formulario y hacer el proceso de descarga del archivo JSON con las credenciales. **El archivo JSON debe ir en la carpeta raiz del proyecto**
+
+## Instrucciones de instalacion con Docker
+git clone <URL_DEL_REPOSITORIO>
+cd <NOMBRE_DEL_REPOSITORIO>
+
+docker build -t aroundlife-app .
+
+docker run -it --rm aroundlife-app
