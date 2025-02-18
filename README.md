@@ -6,12 +6,19 @@ Compuestas por un Frontend creado con React el cúal contiene un formulario que 
 
 # Instrucciones
 git clone <nombre_del_repositorio>
+
 cd server
+
 pip install -r requirements.txt
+
 set FLASK_ENV=development
+
 python app.py
 
 En otra ventana de consola:
+
 cd client
+
 npm install
+
 npm run dev
