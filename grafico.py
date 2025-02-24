@@ -63,7 +63,10 @@ def mostrar_grafico(df_filtered, names):
         # Añadir un título al gráfico
         plt.title("Around Life", size=20, color='#50C878', y=1.1, fontweight='bold')
         # Mostrar el gráfico
-        plt.show()
+        plt.savefig('grafico_radar.png')
     
+        plt.show()
+        plt.close()
+        
     # Llamar a la función para dibujar el gráfico
     dibujar()

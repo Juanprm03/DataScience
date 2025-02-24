@@ -22,7 +22,10 @@ def generar_barras(df_promedio):
         plt.xlabel("Promedio")  # Etiqueta del eje X
         plt.ylabel("Categoría")  # Etiqueta del eje Y
         plt.title("Grafico de barras de estado general de los participantes")  # Título del gráfico
-        plt.show()  # Mostrar el gráfico
+        plt.savefig("grafico_barras.png")
     
+        plt.show()  # Mostrar el gráfico
+        plt.close()
+        
     # Llamar a la función para dibujar el gráfico
     dibujar()
