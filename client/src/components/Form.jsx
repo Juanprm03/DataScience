@@ -65,13 +65,13 @@ function Form() {
   return (
     <section className="flex flex-1 max-w-lg mx-auto p-4 bg-neutral-100 my-8 rounded-xl shadow-lg">
       <form className="flex flex-col gap-4 w-full" onSubmit={handleSubmit}>
-        <h2 className="font-semibold text-xl text-red-500">
+        <h2 className="font-semibold text-xl text-cyan-700">
           Información personal
         </h2>
 
         <label>Nombre completo</label>
         <input
-          className="outline-none w-full border-b border-red-500 p-2 text-md"
+          className="outline-none w-full border-b border-cyan-700 p-2 text-md"
           type="text"
           name="nombreCompleto"
           placeholder="Nombre completo"
@@ -81,7 +81,7 @@ function Form() {
 
         <label>Correo</label>
         <input
-          className="outline-none w-full border-b border-red-500 p-2 text-md"
+          className="outline-none w-full border-b border-cyan-700 p-2 text-md"
           type="text"
           name="correo"
           placeholder="Correo"
@@ -91,7 +91,7 @@ function Form() {
 
         <label>Celular</label>
         <input
-          className="outline-none w-full border-b border-red-500 p-2 text-md"
+          className="outline-none w-full border-b border-cyan-700 p-2 text-md"
           type="number"
           name="celular"
           placeholder="Celular"
@@ -101,7 +101,7 @@ function Form() {
 
         <label>Edad</label>
         <input
-          className="outline-none w-full border-b border-red-500 p-2 text-md"
+          className="outline-none w-full border-b border-cyan-700 p-2 text-md"
           type="number"
           name="edad"
           placeholder="Edad"
@@ -111,7 +111,7 @@ function Form() {
 
         <label>Sexo</label>
         <select
-          className="outline-none w-full border-b border-red-500 p-2 text-md"
+          className="outline-none w-full border-b border-cyan-700 p-2 text-md"
           name="sexo"
           value={formData.sexo}
           onChange={handleChange}
@@ -125,7 +125,7 @@ function Form() {
 
         <label>País</label>
         <input
-          className="outline-none w-full border-b border-red-500 p-2 text-md"
+          className="outline-none w-full border-b border-cyan-700 p-2 text-md"
           type="text"
           name="pais"
           placeholder="Pais"
@@ -133,13 +133,13 @@ function Form() {
           onChange={handleChange}
         />
 
-        <h2 className="font-semibold text-lg text-red-500 my-4">
+        <h2 className="font-semibold text-lg text-cyan-700 my-4">
           Califica cada area en un rango de 1 a 10. Siendo 1 muy malo y 10 muy bueno
         </h2>
 
         <label>Salud fisica</label>
         <select
-          className="outline-none w-full border-b border-red-500 p-2 text-md"
+          className="outline-none w-full border-b border-cyan-700 p-2 text-md"
           name="saludFisica"
           value={formData.saludFisica}
           onChange={handleChange}
@@ -161,7 +161,7 @@ function Form() {
 
         <label>Salud emocional</label>
         <select
-          className="outline-none w-full border-b border-red-500 p-2 text-md"
+          className="outline-none w-full border-b border-cyan-700 p-2 text-md"
           name="saludEmocional"
           value={formData.saludEmocional}
           onChange={handleChange}
@@ -183,7 +183,7 @@ function Form() {
 
         <label>Familia</label>
         <select
-          className="outline-none w-full border-b border-red-500 p-2 text-md"
+          className="outline-none w-full border-b border-cyan-700 p-2 text-md"
           name="familia"
           value={formData.familia}
           onChange={handleChange}
@@ -205,7 +205,7 @@ function Form() {
 
         <label>Amigos</label>
         <select
-          className="outline-none w-full border-b border-red-500 p-2 text-md"
+          className="outline-none w-full border-b border-cyan-700 p-2 text-md"
           name="amigos"
           value={formData.amigos}
           onChange={handleChange}
@@ -227,7 +227,7 @@ function Form() {
 
         <label>Vida social</label>
         <select
-          className="outline-none w-full border-b border-red-500 p-2 text-md"
+          className="outline-none w-full border-b border-cyan-700 p-2 text-md"
           name="vidaSocial"
           value={formData.vidaSocial}
           onChange={handleChange}
@@ -249,7 +249,7 @@ function Form() {
 
         <label>Diversión y reccreación</label>
         <select
-          className="outline-none w-full border-b border-red-500 p-2 text-md"
+          className="outline-none w-full border-b border-cyan-700 p-2 text-md"
           name="diversionRecreacion"
           value={formData.diversion}
           onChange={handleChange}
@@ -271,7 +271,7 @@ function Form() {
 
         <label>Estudios o trabajo</label>
         <select
-          className="outline-none w-full border-b border-red-500 p-2 text-md"
+          className="outline-none w-full border-b border-cyan-700 p-2 text-md"
           name="estudiosTrabajo"
           value={formData.estudios}
           onChange={handleChange}
@@ -293,7 +293,7 @@ function Form() {
 
         <label>Finanzas</label>
         <select
-          className="outline-none w-full border-b border-red-500 p-2 text-md"
+          className="outline-none w-full border-b border-cyan-700 p-2 text-md"
           name="finanzas"
           value={formData.finanzas}
           onChange={handleChange}
@@ -315,7 +315,7 @@ function Form() {
 
         <label>Desarrollo personal</label>
         <select
-          className="outline-none w-full border-b border-red-500 p-2 text-md"
+          className="outline-none w-full border-b border-cyan-700 p-2 text-md"
           name="desarrolloPersonal"
           value={formData.desarrolloPersonal}
           onChange={handleChange}
@@ -337,7 +337,7 @@ function Form() {
 
         <label>Espiritual</label>
         <select
-          className="outline-none w-full border-b border-red-500 p-2 text-md"
+          className="outline-none w-full border-b border-cyan-700 p-2 text-md"
           name="espiritual"
           value={formData.espiritual}
           onChange={handleChange}
@@ -357,7 +357,7 @@ function Form() {
           <option value="10">10</option>
         </select>
 
-        <button className="bg-red-500 text-white p-2 rounded-lg mt-4 cursor-pointer hover:bg-red-600 transition-all ease-out duration-300" onClick={handleSubmit}>
+        <button className="bg-cyan-700 text-white p-2 rounded-lg mt-4 cursor-pointer hover:bg-cyan-800 transition-all ease-out duration-300" onClick={handleSubmit}>
           Enviar
         </button>
       </form>

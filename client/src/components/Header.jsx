@@ -1,13 +1,25 @@
-import React from 'react'
+import { Bell, User } from "lucide-react";
 
 function Header() {
   return (
-    <>
-      <header className='bg-neutral-100 text-center py-4 sticky top-0'>
-        <h1 className='text-black text-3xl font-semibold'>Around<span className='text-red-500'>Life</span></h1>
-      </header>
-    </>
-  )
+    <header className="bg-white shadow-sm">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between h-16">
+          <div className="flex">
+            <div className="flex-shrink-0 flex items-center">
+              <h1 className="text-2xl font-semibold text-gray-900">
+                Panel de usuario
+              </h1>
+            </div>
+          </div>
+          <div className="flex items-center">
+            
+          </div>
+        </div>
+      </div>
+    </header>
+  );
 }
 
-export default Header
+
+export default Header;
