@@ -41,6 +41,9 @@ function Sidebar() {
                 <Link to="/politica" className="text-sm font-medium text-gray-600 hover:text-gray-900">
                   Política de privacidad
                 </Link>
+                <div className="mt-4 text-sm text-gray-500">
+                  © 2025 AroundLife. Todos los derechos reservados.
+                </div>
               </div>
             </div>
           </div>
@@ -99,6 +102,9 @@ function Sidebar() {
                 <Link to="/politica" className="text-base font-medium text-gray-600 hover:text-gray-900">
                   Política de privacidad
                 </Link>
+                <div className="mt-4 text-sm text-gray-500">
+                  © 2025 AroundLife. Todos los derechos reservados.
+                </div>
               </div>
             </div>
           </div>
