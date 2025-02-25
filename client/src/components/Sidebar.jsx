@@ -1,16 +1,16 @@
-import { useState } from "react"
-import { Link } from "react-router-dom"
-import { BarChart3, FileText, FormInputIcon, LayoutDashboard, Menu, X } from "lucide-react"
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import { BarChart3, FileText, FormInputIcon, LayoutDashboard, Menu, X } from "lucide-react";
 
 const menuItems = [
   { name: "Inicio", icon: LayoutDashboard, href: "/" },
   { name: "Formulario", icon: FormInputIcon, href: "/form" },
   { name: "Gráficos", icon: BarChart3, href: "/charts" },
-  {name: "Informe", icon: FileText, href: "/informe"}
-]
+  { name: "Informe", icon: FileText, href: "/informe" }
+];
 
 function Sidebar() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
     <>
@@ -33,6 +33,15 @@ function Sidebar() {
                   </Link>
                 ))}
               </nav>
+              <div className="px-2 py-4 border-t border-gray-200">
+                <Link to="/terminos" className="text-sm font-medium text-gray-600 hover:text-gray-900">
+                  Términos y condiciones
+                </Link>
+                <span className="mx-2 text-gray-400">|</span>
+                <Link to="/politica" className="text-sm font-medium text-gray-600 hover:text-gray-900">
+                  Política de privacidad
+                </Link>
+              </div>
             </div>
           </div>
         </div>
@@ -82,12 +91,21 @@ function Sidebar() {
                   </Link>
                 ))}
               </nav>
+              <div className="mt-5 px-2 space-y-1 border-t border-gray-200">
+                <Link to="/terminos" className="text-base font-medium text-gray-600 hover:text-gray-900">
+                  Términos y condiciones
+                </Link>
+                <span className="mx-2 text-gray-400">|</span>
+                <Link to="/politica" className="text-base font-medium text-gray-600 hover:text-gray-900">
+                  Política de privacidad
+                </Link>
+              </div>
             </div>
           </div>
         </div>
       )}
     </>
-  )
+  );
 }
 
-export default Sidebar
+export default Sidebar;
