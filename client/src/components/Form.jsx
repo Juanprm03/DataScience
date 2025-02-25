@@ -1,4 +1,7 @@
-import { useState } from "react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function Form() {
   const [formData, setFormData] = useState({
@@ -20,6 +23,8 @@ function Form() {
     espiritual: ""
   });
 
+  const navigate = useNavigate();
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -32,33 +37,35 @@ function Form() {
     e.preventDefault();
     // Verificar que los campos de tipo text sean strings y no esten vacíos
     for (const key in formData) {
-        if (typeof formData[key] === "string" && formData[key].trim() === "") {
-            return alert("Por favor llena todos los campos");
-        }
+      if (typeof formData[key] === "string" && formData[key].trim() === "") {
+        return toast.error("Por favor llena todos los campos");
+      }
 
-        if (typeof formData[key] === "number" && (formData[key] < 1 || formData[key] > 10)) {
-            return alert("Por favor califica cada área en un rango de 1 a 10");
-        }
+      if (typeof formData[key] === "number" && (formData[key] < 1 || formData[key] > 10)) {
+        return toast.error("Por favor califica cada área en un rango de 1 a 10");
+      }
     }
-    
-    console.log(formData);
-    
-    try {
-        const res = await fetch("http://127.0.0.1:5000/respuestas", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(formData)
-        })
 
-        const resultado = await res.json();
-        console.log(resultado);
-        alert("Formulario enviado con éxito");
-        window.location.reload();
+    console.log(formData);
+
+    try {
+      const res = await fetch("http://127.0.0.1:5000/respuestas", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(formData)
+      });
+
+      const resultado = await res.json();
+      console.log(resultado);
+      toast.success("Formulario enviado con éxito");
+      setTimeout(() => {
+        navigate("/");
+      }, 2000);
     } catch (error) {
-        console.error(error.message);
-        alert("Ocurrió un error al enviar el formulario");
+      console.error(error.message);
+      toast.error("Ocurrió un error al enviar el formulario");
     }
   };
 
@@ -251,7 +258,7 @@ function Form() {
         <select
           className="outline-none w-full border-b border-cyan-700 p-2 text-md"
           name="diversionRecreacion"
-          value={formData.diversion}
+          value={formData.diversionRecreacion}
           onChange={handleChange}
         >
           <option value="" selected disabled>
@@ -273,7 +280,7 @@ function Form() {
         <select
           className="outline-none w-full border-b border-cyan-700 p-2 text-md"
           name="estudiosTrabajo"
-          value={formData.estudios}
+          value={formData.estudiosTrabajo}
           onChange={handleChange}
         >
           <option value="" selected disabled>
@@ -357,10 +364,11 @@ function Form() {
           <option value="10">10</option>
         </select>
 
-        <button className="bg-cyan-700 text-white p-2 rounded-lg mt-4 cursor-pointer hover:bg-cyan-800 transition-all ease-out duration-300" onClick={handleSubmit}>
+        <button className="bg-cyan-700 text-white p-2 rounded-lg mt-4 cursor-pointer hover:bg-cyan-800 transition-all ease-out duration-300">
           Enviar
         </button>
       </form>
+      <ToastContainer />
     </section>
   );
 }
