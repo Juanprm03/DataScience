@@ -1,0 +1,32 @@
+DROP TABLE IF EXISTS Personas;
+CREATE TABLE  Personas (
+    id INT PRIMARY KEY,
+    nombreCompleto VARCHAR(50),
+    correo VARCHAR(100),
+    celular VARCHAR(20),
+    edad INT,
+    sexo VARCHAR(10),
+    pais VARCHAR(50),
+    saludFisica INT,
+    saludEmocional INT,
+    familia INT,
+    amigos INT,
+    vidaSocial INT,
+    diversion INT,
+    estudios INT,
+    finanzas INT,
+    desarrolloPersonal INT,
+    espiritual INT
+);
+
+INSERT INTO Personas (id, nombreCompleto, correo, celular, edad, sexo, pais, saludFisica, saludEmocional, familia, amigos, vidaSocial, diversion, estudios, finanzas, desarrolloPersonal, espiritual)
+VALUES
+    (1, 'Gero', 'gero@gmail.com', '3104484', 18, 'hombre', 'Colombia', 3, 3, 4, 3, 3, 1, 4, 7, 5, 2),
+    (2, 'Gero', 'gero@gmail.com', '3104484', 18, 'hombre', 'Colombia', 3, 3, 4, 3, 7, 3, 1, 4, 5, 2),
+    (3, 'Pablo', 'pablo@gmail.com', '390882839282', 18, 'hombre', 'Colombia', 7, 2, 6, 6, 2, 5, 7, 5, 8, 3),
+    (4, 'Julio', 'julius@gmail.com', '17138972', 28, 'hombre', 'Colombia', 3, 3, 6, 9, 8, 10, 5, 6, 8, 4),
+    (5, 'Kimberly', 'kim@gmail.com', '6126312831', 27, 'mujer', 'Mexico', 9, 2, 6, 8, 6, 9, 10, 10, 7, 10),
+    (6, 'Camila', 'camila@gmail.com', '3229876489', 21, 'mujer', 'Colombia', 10, 7, 7, 8, 7, 9, 7, 7, 9, 10),
+    (7, 'Camila', 'camila@gmail.com', '3229876489', 21, 'mujer', 'Colombia', 10, 7, 7, 8, 7, 9, 7, 7, 9, 10),
+    (8, 'juana', 'camila@gmail.com', '3229876489', 21, 'mujer', 'Colombia', 10, 7, 7, 8, 7, 9, 7, 7, 9, 10),
+    (9, 'Mariana', 'mariana@gmail.com', '3049375678', 22, 'mujer', 'Colombia', 7, 5, 5, 8, 4, 2, 3, 7, 5, 9);
